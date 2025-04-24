@@ -1,0 +1,37 @@
+﻿body {
+    font-family: sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.panel {
+    background-color: #333;
+    padding: 2em;
+    border-radius: 20px;
+    width: 300px;
+}
+
+input, button {
+    margin-top: 1em;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 1em;
+}
