@@ -60,7 +60,7 @@ namespace TSOPsWebAPI02.Controllers
         {
             try
             {
-                System.Diagnostics.Debug.WriteLine($"ReadDescriptor requested for tag: {tagName}");
+                //System.Diagnostics.Debug.WriteLine($"ReadDescriptor requested for tag: {tagName}");
 
                 PIPoint myPIPoint = PIPoint.FindPIPoint(_piServer, tagName);
                 
@@ -78,7 +78,7 @@ namespace TSOPsWebAPI02.Controllers
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error reading PI Point: {ex.Message}");
+                //System.Diagnostics.Debug.WriteLine($"Error reading PI Point: {ex.Message}");
                 return BadRequest($"Error: {ex.Message}");
             }
         }
