@@ -55,7 +55,7 @@ input[type="text"] {
 
 button {
     width: 40%; /* reduced from 100% */
-    margin: 0 auto; /* center the button */
+    margin: 8px 0; /* adds spacing above and below */
     padding: 6px; /* slightly smaller padding */
     background-color: #888;
     color: black;
@@ -63,6 +63,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block; /* required to center with margin auto */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
@@ -74,8 +76,31 @@ button:hover {
     margin-top: 10px;
 }
 
+.result .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.result .form-group label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    font-weight: normal; /* keep it non-bold */
+    font-size: 14px;      /* match input size */
+}
+
+.result .form-group span {
+    font-size: 14px;      /* match input size */
+    color: white;
+    display: inline-block;
+    min-height: 1em;      /* reserve space to avoid layout shift */
+    word-break: break-word;
+    max-width: 170px;
+}
+
 hr {
     border: none;
     border-top: 1px solid #666;
-    margin: 15px 0;
+    margin: 10px 0 5px; /* reduce bottom margin to keep height balance */
 }

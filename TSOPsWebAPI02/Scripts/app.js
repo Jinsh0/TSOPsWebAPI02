@@ -14,15 +14,13 @@ function readDescriptor() {
             return res.json();
         })
         .then(data => {
-            document.getElementById('readResult').innerHTML = `
-                <p><strong>Status:</strong> ${data.Status}</p>
-                <p><strong>Value:</strong> ${data.Value}</p>`;
+            document.getElementById('readStatusValue').textContent = data.Status;
+            document.getElementById('readValueValue').textContent = data.Value;
         })
         .catch (err => {
-            document.getElementById('readResult').innerHTML = `
-                <p><strong>Status:</strong> Error</p>
-                <p><strong>Value:</strong> ${err.message}</p>`;
-            });
+            document.getElementById('readStatusValue').textContent = 'Error';
+            document.getElementById('readValueValue').textContent = err.message;
+        });
 }
 
 function renamePoint() {
@@ -44,13 +42,11 @@ function renamePoint() {
             return res.json();
         })
         .then(data => {
-            document.getElementById('renameResult').innerHTML = `
-                <p><strong>Status:</strong> ${data.Status}</p>
-                <p><strong>Value:</strong> ${data.Value}</p>`;
+            document.getElementById('renameStatusValue').textContent = data.Status;
+            document.getElementById('renameValueValue').textContent = data.Value;
         })
         .catch (err => {
-            document.getElementById('renameResult').innerHTML = `
-                <p><strong>Status:</strong> Error</p>
-                <p><strong>Value:</strong> ${err.message}</p>`;
-            });
+            document.getElementById('renameStatusValue').textContent = 'Error';
+            document.getElementById('renameValueValue').textContent = err.message;
+        });
 }
