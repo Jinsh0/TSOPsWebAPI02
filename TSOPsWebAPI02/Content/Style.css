@@ -21,6 +21,22 @@
     width: 320px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: left;
+    /* below here added to make them vertically alligned */
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.panel-content {
+    flex: 1; /* Fills remaining height, pushes button + result to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align content to top */
+}
+
+.input-section {
+    flex-grow: 1; /* allows input block to expand if needed */
 }
 
 h1 {
@@ -55,7 +71,7 @@ input[type="text"] {
 
 button {
     width: 40%; /* reduced from 100% */
-    margin: 8px 0; /* adds spacing above and below */
+    margin: 8px auto; /* adds spacing above and below, centers button */
     padding: 6px; /* slightly smaller padding */
     background-color: #888;
     color: black;
@@ -63,8 +79,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block; /* required to center with margin auto */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 button:hover {
@@ -87,14 +101,14 @@ button:hover {
     margin-right: 10px;
     text-align: right;
     font-weight: normal; /* keep it non-bold */
-    font-size: 14px;      /* match input size */
+    font-size: 14px; /* match input size */
 }
 
 .result .form-group span {
-    font-size: 14px;      /* match input size */
+    font-size: 14px; /* match input size */
     color: white;
     display: inline-block;
-    min-height: 1em;      /* reserve space to avoid layout shift */
+    min-height: 1em; /* reserve space to avoid layout shift */
     word-break: break-word;
     max-width: 170px;
 }
