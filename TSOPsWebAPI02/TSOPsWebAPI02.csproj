@@ -140,6 +140,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\Part3.js" />
     <Content Include="WebUI\index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
